@@ -56,7 +56,11 @@ table {
 // <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat|Roboto&display=swap" rel="stylesheet"> 
 //End Google Fonts
 
-html, body {
+html {
+
+} 
+
+body {
 	
 	height: 100%;
 	font-family: @bodyFont;
@@ -72,6 +76,7 @@ html, body {
 @tablet: 800px;
 @computer: 1000px;
 @borderColor: lightgrey;
+@borderRadius: 10px;
 @bodyFont: 'Lato', sans-serif;
 @titleFont: 'Montserrat', sans-serif;
 // font-family: 'Montserrat', sans-serif;
@@ -88,6 +93,17 @@ html, body {
 	padding-right: @equal;
 	padding-left: @equal;
 }
+.marginRL(@left,@right:@left){
+	margin-left: @left;
+	margin-right: @right;
+}
+.box-shadow(@h-offset:0, @v-offset:20px, @blur:30px, @spread:0, @color:#5c5c5c ){
+	box-shadow:0 20px 30px #5c5c5c;
+}
+.border-rad(@borderRadius: 12px){
+	border-radius: @borderRadius;
+}
+
 //End Mixin Functions
 
 //Main Container
@@ -102,7 +118,10 @@ html, body {
 			border: none;
 		}
 		.pageTitle {
-			// margin: 1rem;
+			@media(max-width: @phone){
+			// text-align: center;
+			}
+			
 		}
 	// .pageTitle {
 		// display: flex;
@@ -159,12 +178,11 @@ html, body {
 					color: red;
 				}
 				button {
-
 					padding: 1rem; 
 					background-color: rgba(9, 255, 0, 0.205);
-					padding-top: 5%;
-					width: 7.5rem;
-					border-radius: 8px;
+					// padding-top: 5%;
+					width: 5rem;
+					.border-rad();
 					text-align: center;
 					vertical-align: center;
 
@@ -187,7 +205,7 @@ html, body {
 						background-color: rgba(9, 255, 0, 0.205);
 						padding-top: 5%;
 						width: 15rem;
-						border-radius: 8px;
+						border-radius: @borderRadius;
 
 						&:hover {
 							background-color: rgba(60, 255, 0, 0.692);
@@ -218,9 +236,10 @@ html, body {
 }//End Container, Header & Nav
 .container {
 	.intro { 
-		margin: 4% 0%;
+		margin: 2% 0%;
 		display: flex;
 		.flexDisplay(space-around);
+		
 		
 		@media(max-width: @phone){
 			flex-direction: column;
@@ -249,8 +268,6 @@ html, body {
 			width:100%;
 			// display: flex;
 			}
-			
-			
 		}
 		.flexMe {
 			display: flex;
@@ -262,21 +279,130 @@ html, body {
 			h1 {
 				text-align: center;
 			}
-
 		}
 		.manImage {
 			min-width: 45%;
-			max-width: 65%;
+			max-width: 85%;
 			margin: 2rem;
-			border-radius: 8px;
-			box-shadow:0 20px 30px #5c5c5c;
+			.border-rad();
+			.box-shadow();
 		}
 		.sideText {
-			margin-top: 5%;
+			margin-top: 2rem;
 			padding: 4rem;
 			background-color: lightgrey;
+			.box-shadow();
+			.border-rad();
 		}
+	}
+
+}//End container
+
+.container {
+	.skills {
+		
+		font-size: 1.75rem;
+		font-weight: 800;
+		margin-bottom: 2rem;
+		padding: 1rem;
+		background-color: rgb(226, 105, 131);
+		.border-rad();
+		.box-shadow();
+		h1 {
+			margin-bottom: 2rem;
+		}
+		tr td {
+			width: 2rem;
+			padding: 1rem;
+			text-align: center;
+			vertical-align: center;
+			border: 2px solid black;
+			// line-height: 2;
+			// word-break: all;
+			&:hover {
+				td  {
+					transform: scale(1,1);
+					transition-duration: 1.25s;
+					transition-timing-function: ease-in-out;
+				}
+			}
+
+		}		
+		@media(max-width: @phone){
+			font-size: 1.25rem;
+		}
+	}
+	.copyright {
+		font-size: 2rem;
+		margin-bottom: 2rem;
+	}
+}
+
+.container {
+	.bottom {
+		margin-top: 2rem;
+	// margin: 2% 0%;
+	display: flex;
+	.flexDisplay(space-between, center);
+	flex-wrap: wrap;
 	
-	
+	@media(max-width: @phone){
+		flex-direction: column;
+		flex-wrap: wrap flex;
+
+		h1 {
+			margin: 0;
+		}
+	}
+
+	h1 {
+		font-size: 3.5rem;
+		margin: 2%;
+	}
+	// h2 {
+	// 	font-size: 2rem;
+	// 	text-align: center;
+	// }
+	.right {
+		width: 45%;
+		// margin-top: 1%;
+		font-size: 3.5rem;
+		text-align: center;
+
+
+	.history {	
+				margin-bottom: 3rem;
+				ul, li {
+					// margin-top: 1%;
+					font-size: 1.5rem;
+					// padding-left: 3rem;
+					// margin-left: 2rem;
+					text-align: left;
+					list-style-type: disc;
+					list-style-position: inside;
+				}
+				@media(max-width: @tablet){
+				
+				}
+				@media(max-width: @phone){
+				width:100%;
+				padding-left: 0;
+				margin-left: 0rem;
+				// display: flex;
+				}
+			}
+		}
+	}
+}
+.container {
+	.contact {
+		margin-top: 2rem;
+		font-size: 2rem;
+		margin-bottom: 2rem;
+		text-align: center;
+		padding: 2rem;
+		background-color: rgba(79, 107, 235, 0.842);
+		.box-shadow();
+		.border-rad();
 	}
 }
