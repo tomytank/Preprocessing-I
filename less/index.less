@@ -57,18 +57,18 @@ table {
 //End Google Fonts
 
 html, body {
+	
 	height: 100%;
 	font-family: @bodyFont;
-
 	font-size: 62.5%;//62.4% of 16px (html page standard)=== 10px 
-	// width: 90%;
-	margin: 0 auto; 
-	// display: flex;
-	// background-color: red;
+	margin: 0 auto;
+	background-color: rgba(116, 227, 255, 0.199);
+	// margin-top: 3rem;
+	
 }
 
 //Variables
-@phone: 500px;
+@phone: 600px;
 @tablet: 800px;
 @computer: 1000px;
 @borderColor: lightgrey;
@@ -80,7 +80,7 @@ html, body {
 //End Variables
 
 //Mixin Functions
-.flexDisplay(@justify, @align){
+.flexDisplay(@justify:space-between, @align:flex-start){
 	justify-content: @justify;
 	align-items: @align;
 }
@@ -93,7 +93,7 @@ html, body {
 //Main Container
 .container {
 	// .flexDisplay("space-between", "center");
-	border: 2px solid @borderColor;
+	// border: 2px solid @borderColor;
 	// display: flex;
 	max-width: 1100px;
 	width: 90%;
@@ -101,12 +101,15 @@ html, body {
 		@media(max-width: @phone){
 			border: none;
 		}
+		.pageTitle {
+			// margin: 1rem;
+		}
 	// .pageTitle {
 		// display: flex;
 		h1 {
 			font-family: @titleFont;
-			font-size: 2rem;
-			// margin-top: 5%;
+			font-size: 4rem;
+			margin-top: 5%;
 			// margin: 0 auto; 
 			.flexDisplay(center, center);
 		}
@@ -115,11 +118,22 @@ html, body {
 
 //Header & Nav
 .container {
-
+	margin-top: 3rem;
+	.pageTitle {
+		margin-top: 3rem;
+		@media(max-width: @phone){
+			text-align: center;
+		}
+	}
 	header {
 		display: flex;
 		.flexDisplay(space-between, center);
-		// justify-content: space-between;
+		margin: 2rem;
+		margin-left: 0;
+		h1 {
+			margin-right: 2rem;
+			margin-left: 1rem;
+		}
 		@media(max-width: @phone){
 			flex-direction: column;
 		}
@@ -128,7 +142,7 @@ html, body {
 			max-width: 100%;
 			display: flex;
 			font-size: 1.5rem;
-			margin-right: 5%;
+			margin-right: 1%;
 
 			@media(max-width: @phone){
 				flex-direction: column;
@@ -137,18 +151,50 @@ html, body {
 
 			a {
 				margin-top: 10%;
+				// display: inline-block;
+				// border-top: 2px solid @borderColor;
 				text-decoration: none;
 				.padRL(3%);
 				&:hover {
 					color: red;
 				}
+				button {
 
-				@media(max-width: @phone){
-					width: @phone; 
-					margin-right: 5%;
-					text-align: center; 
+					padding: 1rem; 
+					background-color: rgba(9, 255, 0, 0.205);
 					padding-top: 5%;
-					border-top: 2px solid @borderColor;
+					width: 7.5rem;
+					border-radius: 8px;
+					text-align: center;
+					vertical-align: center;
+
+					&:hover {
+						background-color: rgba(60, 255, 0, 0.692);
+						color: grey;
+					}
+				}
+				@media(max-width: @phone){
+					// width: @phone; 
+					overflow: hidden;
+					// margin-right: 5%;
+					
+					
+					text-align: baseline; 
+					
+					button {
+
+						padding: 1rem 2rem; 
+						background-color: rgba(9, 255, 0, 0.205);
+						padding-top: 5%;
+						width: 15rem;
+						border-radius: 8px;
+
+						&:hover {
+							background-color: rgba(60, 255, 0, 0.692);
+							color: grey;
+						}
+					}
+					// border-top: 2px solid @borderColor;
 					// border-left: 2px solid @borderColor;
 					// flex-direction: column;
 
@@ -169,5 +215,68 @@ html, body {
 			}
 		}
 	}
+}//End Container, Header & Nav
+.container {
+	.intro { 
+		margin: 4% 0%;
+		display: flex;
+		.flexDisplay(space-around);
+		
+		@media(max-width: @phone){
+			flex-direction: column;
+		}
+
+		h1 {
+			font-size: 3.5rem;
+			margin: 2%;
+		}
+		h2 {
+			font-size: 2rem;
+			text-align: center;
+		}
+		div {
+			width: 45%;
+			
+			p {
+				margin-top: 1%;
+				font-size: 1.8rem;
+				text-align: center;
+			}
+			@media(max-width: @tablet){
+			
+			}
+			@media(max-width: @phone){
+			width:100%;
+			// display: flex;
+			}
+			
+			
+		}
+		.flexMe {
+			display: flex;
+			flex-wrap: wrap;
+			// grid-template-columns: 1fr 1fr;
+			// grid-column-gap: 1rem;
+			.flexDisplay(space-evenly, center);
+			
+			h1 {
+				text-align: center;
+			}
+
+		}
+		.manImage {
+			min-width: 45%;
+			max-width: 65%;
+			margin: 2rem;
+			border-radius: 8px;
+			box-shadow:0 20px 30px #5c5c5c;
+		}
+		.sideText {
+			margin-top: 5%;
+			padding: 4rem;
+			background-color: lightgrey;
+		}
+	
+	
+	}
 }
-//End Header & Nav

@@ -136,30 +136,48 @@ body {
   font-family: 'Lato', sans-serif;
   font-size: 62.5%;
   margin: 0 auto;
+  background-color: rgba(116, 227, 255, 0.199);
 }
 .container {
-  border: 2px solid lightgrey;
   max-width: 1100px;
   width: 90%;
   margin: 0 auto;
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .container {
     border: none;
   }
 }
 .container h1 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 2rem;
+  font-size: 4rem;
+  margin-top: 5%;
   justify-content: center;
   align-items: center;
+}
+.container {
+  margin-top: 3rem;
+}
+.container .pageTitle {
+  margin-top: 3rem;
+}
+@media (max-width: 600px) {
+  .container .pageTitle {
+    text-align: center;
+  }
 }
 .container header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 2rem;
+  margin-left: 0;
 }
-@media (max-width: 500px) {
+.container header h1 {
+  margin-right: 2rem;
+  margin-left: 1rem;
+}
+@media (max-width: 600px) {
   .container header {
     flex-direction: column;
   }
@@ -170,9 +188,9 @@ body {
   max-width: 100%;
   display: flex;
   font-size: 1.5rem;
-  margin-right: 5%;
+  margin-right: 1%;
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .container header nav {
     flex-direction: column;
   }
@@ -186,15 +204,36 @@ body {
 .container header nav a:hover {
   color: red;
 }
-@media (max-width: 500px) {
+.container header nav a button {
+  padding: 1rem;
+  background-color: rgba(9, 255, 0, 0.205);
+  padding-top: 5%;
+  width: 7.5rem;
+  border-radius: 8px;
+  text-align: center;
+  vertical-align: center;
+}
+.container header nav a button:hover {
+  background-color: rgba(60, 255, 0, 0.692);
+  color: grey;
+}
+@media (max-width: 600px) {
   .container header nav a {
-    width: 500px;
-    margin-right: 5%;
-    text-align: center;
-    padding-top: 5%;
-    border-top: 2px solid lightgrey;
+    overflow: hidden;
+    text-align: baseline;
     justify-content: space-between;
     align-items: center;
+  }
+  .container header nav a button {
+    padding: 1rem 2rem;
+    background-color: rgba(9, 255, 0, 0.205);
+    padding-top: 5%;
+    width: 15rem;
+    border-radius: 8px;
+  }
+  .container header nav a button:hover {
+    background-color: rgba(60, 255, 0, 0.692);
+    color: grey;
   }
   .container header nav a:last-child {
     padding-bottom: 5%;
@@ -203,4 +242,57 @@ body {
   .container header nav a:hover {
     color: yellow;
   }
+}
+.container .intro {
+  margin: 4% 0%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+@media (max-width: 600px) {
+  .container .intro {
+    flex-direction: column;
+  }
+}
+.container .intro h1 {
+  font-size: 3.5rem;
+  margin: 2%;
+}
+.container .intro h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+.container .intro div {
+  width: 45%;
+}
+.container .intro div p {
+  margin-top: 1%;
+  font-size: 1.8rem;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .container .intro div {
+    width: 100%;
+  }
+}
+.container .intro .flexMe {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.container .intro .flexMe h1 {
+  text-align: center;
+}
+.container .intro .manImage {
+  min-width: 45%;
+  max-width: 65%;
+  margin: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 20px 30px #5c5c5c;
+}
+.container .intro .sideText {
+  margin-top: 5%;
+  padding: 4rem;
+  background-color: lightgrey;
 }
