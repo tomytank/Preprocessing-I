@@ -1,1 +1,385 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+body {
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+  font-size: 62.5%;
+  margin: 0 auto;
+  background-color: rgba(116, 227, 255, 0.199);
+}
+.container {
+  max-width: 1100px;
+  width: 90%;
+  margin: 0 auto;
+}
+@media (max-width: 600px) {
+  .container {
+    border: none;
+  }
+}
+@media (max-width: 600px) {
+}
+.container h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4rem;
+  margin-top: 5%;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  margin-top: 3rem;
+}
+.container .pageTitle {
+  margin-top: 3rem;
+}
+@media (max-width: 600px) {
+  .container .pageTitle {
+    text-align: center;
+  }
+}
+.container header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem;
+  margin-left: 0;
+}
+.container header h1 {
+  margin-right: 2rem;
+  margin-left: 1rem;
+}
+@media (max-width: 600px) {
+  .container header {
+    flex-direction: column;
+  }
+}
+.container header nav {
+  justify-content: space-around;
+  align-items: center;
+  max-width: 100%;
+  display: flex;
+  font-size: 1.5rem;
+  margin-right: 1%;
+}
+@media (max-width: 600px) {
+  .container header nav {
+    flex-direction: column;
+  }
+}
+.container header nav a {
+  margin-top: 10%;
+  text-decoration: none;
+  padding-right: 3%;
+  padding-left: 3%;
+}
+.container header nav a:hover {
+  color: red;
+}
+.container header nav a button {
+  padding: 1rem;
+  background-color: rgba(9, 255, 0, 0.205);
+  width: 5rem;
+  border-radius: 12px;
+  text-align: center;
+  vertical-align: center;
+}
+.container header nav a button:hover {
+  background-color: rgba(60, 255, 0, 0.692);
+  color: grey;
+}
+@media (max-width: 600px) {
+  .container header nav a {
+    overflow: hidden;
+    text-align: baseline;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .container header nav a button {
+    padding: 1rem 2rem;
+    background-color: rgba(9, 255, 0, 0.205);
+    padding-top: 5%;
+    width: 15rem;
+    border-radius: 10px;
+  }
+  .container header nav a button:hover {
+    background-color: rgba(60, 255, 0, 0.692);
+    color: grey;
+  }
+  .container header nav a:last-child {
+    padding-bottom: 5%;
+    border-bottom: 2px solid lightgrey;
+  }
+  .container header nav a:hover {
+    color: yellow;
+  }
+}
+.container .intro {
+  margin: 2% 0%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+@media (max-width: 600px) {
+  .container .intro {
+    flex-direction: column;
+  }
+}
+.container .intro h1 {
+  font-size: 3.5rem;
+  margin: 2%;
+}
+.container .intro h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+.container .intro div {
+  width: 45%;
+}
+.container .intro div p {
+  margin-top: 1%;
+  font-size: 1.8rem;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .container .intro div {
+    width: 100%;
+  }
+}
+.container .intro .flexMe {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.container .intro .flexMe h1 {
+  text-align: center;
+}
+.container .intro .manImage {
+  min-width: 45%;
+  max-width: 85%;
+  margin: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 20px 30px #5c5c5c;
+}
+.container .intro .sideText {
+  margin-top: 2rem;
+  padding: 4rem;
+  background-color: lightgrey;
+  box-shadow: 0 20px 30px #5c5c5c;
+  border-radius: 12px;
+}
+.container .skills {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: #e26983;
+  border-radius: 12px;
+  box-shadow: 0 20px 30px #5c5c5c;
+}
+.container .skills h1 {
+  margin-bottom: 2rem;
+}
+.container .skills tr td {
+  width: 2rem;
+  padding: 1rem;
+  text-align: center;
+  vertical-align: center;
+  border: 2px solid black;
+}
+.container .skills tr td:hover td {
+  transform: scale(1, 1);
+  transition-duration: 1.25s;
+  transition-timing-function: ease-in-out;
+}
+@media (max-width: 600px) {
+  .container .skills {
+    font-size: 1.25rem;
+  }
+}
+.container .copyright {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.container .bottom {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media (max-width: 600px) {
+  .container .bottom {
+    flex-direction: column;
+    flex-wrap: wrap flex;
+  }
+  .container .bottom h1 {
+    margin: 0;
+  }
+}
+.container .bottom h1 {
+  font-size: 3.5rem;
+  margin: 2%;
+}
+.container .bottom .right {
+  width: 45%;
+  font-size: 3.5rem;
+  text-align: center;
+}
+.container .bottom .right .history {
+  margin-bottom: 3rem;
+}
+.container .bottom .right .history ul,
+.container .bottom .right .history li {
+  font-size: 1.5rem;
+  text-align: left;
+  list-style-type: disc;
+  list-style-position: inside;
+}
+@media (max-width: 600px) {
+  .container .bottom .right .history {
+    width: 100%;
+    padding-left: 0;
+    margin-left: 0rem;
+  }
+}
+.container .contact {
+  margin-top: 2rem;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  padding: 2rem;
+  background-color: rgba(79, 107, 235, 0.842);
+  box-shadow: 0 20px 30px #5c5c5c;
+  border-radius: 12px;
+}

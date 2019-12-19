@@ -1,19 +1,98 @@
 <!doctype html>
 
 <html lang="en">
-<head>
-  <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
 
-  <title>My Resume</title>
+    <title>My Resume</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Lato|Montserrat|Roboto&display=swap');
+    </style> 
 
-  <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index.css">
 
-  <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  <![endif]-->
-</head>
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+  </head>
 
-<body>
-  <h1>My Resume</h1>
-</body>
+  <body>
+    <section class="container">
+      <section class="pageTitle">
+        <h1>Ryan Blonde's</h1>
+      </section>
+      <header>
+          <h1>Resume</h1>
+        <!-- <div class="wrapper"> -->
+          <nav>
+            <a href="#"><button>Intro</button></a>
+            <a href="#"><button>Skills</button></a>
+            <a href="#"><button>Portfolio</button></a>
+            <a href="#"><button>Contact</button></a>
+          </nav>
+      <!-- </div> -->
+      </header>
+      <section class="intro">
+        <div class="flexMe">
+        <img class="manImage" src="images/floor_man_computer2.jpg" />
+        <h1>A Full Stack Developer</h1>
+      </div><!-- close class flexMe -->
+      <div class="sideText"><h2>I Always Find Time</h2>
+        <br />
+        <p class="headerText">It doesn't matter where the work is, 
+          where you're located or where I am, working on your problems is what I do.</p>
+        <br />
+          <p class="headerText">Check out my resume. Examine what I've been doing.
+        </p>
+        <br />
+        <p class="headerText">Contact me and make arrangements for me to help you too.</p>
+        </div>
+      </section>
+      <div class="bottom">
+        <div class="left">
+          <section class="skills">
+            <h1>Skills</h1>
+            <table>
+              <tbody>
+                    <tr>
+                      <td>Javascript</td>
+                      <td>PHP</td>
+                      <td>CSS</td>
+                    </tr>
+                    <tr>
+                      <td>React</td>
+                      <td>node.js</td>
+                      <td>SQL</td>
+                    </tr>
+                    <tr class="noLine">
+                      <td>SQL</td>  
+                      <td>Git&shy; Version &shy;Control</td>
+                      <td>Github & &shy;Collaboration</td>
+                    </tr>               
+              </tbody>
+            </table>
+          </section>
+          </div><!-- close left -->
+        <div class="right">
+            <section class="history">
+              <h1>Work History</h1>
+            <ul>
+              <li>British Telecom</li>
+              <li>Telefonica</li>
+              <li>KPN</li>
+              <li>Swisscom</li>
+              <li>CISCO</li>
+
+            </ul>
+              </section>
+        </div><!-- close right -->
+      </div><!-- close bottom -->
+      <section class="contact">
+        <p>E-Mail Contact: misc@iamtom.com</p>
+      </section>
+      <footer>
+        <p class="copyright">Copyright TheRightStuff 2019</p>
+      </footer>
+    </section>
+  </body>
 </html>
