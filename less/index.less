@@ -31,11 +31,6 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-	font-size: 62.5%;
-	width: 90%;
-	margin: 0 auto; 
-	// display: flex;
-	// background-color: red;
 }
 ol, ul {
 	list-style: none;
@@ -57,41 +52,122 @@ table {
 * {
     box-sizing: border-box;
 }
+//Google Fonts
+// <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat|Roboto&display=swap" rel="stylesheet"> 
+//End Google Fonts
 
 html, body {
-    height: 100%;
+	height: 100%;
+	font-family: @bodyFont;
+
+	font-size: 62.5%;//62.4% of 16px (html page standard)=== 10px 
+	// width: 90%;
+	margin: 0 auto; 
+	// display: flex;
+	// background-color: red;
 }
+
+//Variables
+@phone: 500px;
+@tablet: 800px;
+@computer: 1000px;
+@borderColor: lightgrey;
+@bodyFont: 'Lato', sans-serif;
+@titleFont: 'Montserrat', sans-serif;
+// font-family: 'Montserrat', sans-serif;
+//'Lato', sans-serif;
+//'Roboto', sans-serif;
+//End Variables
+
+//Mixin Functions
 .flexDisplay(@justify, @align){
 	justify-content: @justify;
 	align-items: @align;
 }
+.padRL(@equal){
+	padding-right: @equal;
+	padding-left: @equal;
+}
+//End Mixin Functions
 
+//Main Container
 .container {
 	// .flexDisplay("space-between", "center");
-	border: 2px solid black;
+	border: 2px solid @borderColor;
 	// display: flex;
+	max-width: 1100px;
+	width: 90%;
+	margin: 0 auto;
+		@media(max-width: @phone){
+			border: none;
+		}
+	// .pageTitle {
+		// display: flex;
+		h1 {
+			font-family: @titleFont;
+			font-size: 2rem;
+			// margin-top: 5%;
+			// margin: 0 auto; 
+			.flexDisplay(center, center);
+		}
+	// }
+}//End Main Container
 
-	h1 {
-		font-size: 2rem;
-	}
+//Header & Nav
+.container {
 
 	header {
 		display: flex;
-
-
-		nav {
-			// .flexDisplay(flex-end, center);
-			display: flex;
-
-			// list-item {
-
-			// }
+		.flexDisplay(space-between, center);
+		// justify-content: space-between;
+		@media(max-width: @phone){
+			flex-direction: column;
 		}
+		nav {
+			.flexDisplay(space-around, center);
+			max-width: 100%;
+			display: flex;
+			font-size: 1.5rem;
+			margin-right: 5%;
 
+			@media(max-width: @phone){
+				flex-direction: column;
+			}//changes the nav flex axis
+
+
+			a {
+				margin-top: 10%;
+				text-decoration: none;
+				.padRL(3%);
+				&:hover {
+					color: red;
+				}
+
+				@media(max-width: @phone){
+					width: @phone; 
+					margin-right: 5%;
+					text-align: center; 
+					padding-top: 5%;
+					border-top: 2px solid @borderColor;
+					// border-left: 2px solid @borderColor;
+					// flex-direction: column;
+
+					&:last-child{
+						padding-bottom: 5%;
+						border-bottom: 2px solid @borderColor;
+					}
+
+
+					.flexDisplay(space-between, center);
+					&:hover {
+						color: yellow;
+					}
+				}
+
+	
+				// justify-content: space-between;
+			}
+		}
 	}
-
-
-
-
 }
-
+//End Header & Nav
