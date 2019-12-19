@@ -106,7 +106,9 @@ section {
 }
 body {
   line-height: 1;
-  background-color: red;
+  font-size: 62.5%;
+  width: 90%;
+  margin: 0 auto;
 }
 ol,
 ul {
@@ -134,4 +136,16 @@ table {
 html,
 body {
   height: 100%;
+}
+.container {
+  border: 2px solid black;
+}
+.container h1 {
+  font-size: 2rem;
+}
+.container header {
+  display: flex;
+}
+.container header nav {
+  display: flex;
 }
