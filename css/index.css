@@ -147,12 +147,11 @@ body {
     border: none;
   }
 }
-@media (max-width: 600px) {
-}
 .container h1 {
   font-family: 'Montserrat', sans-serif;
   font-size: 4rem;
   margin-top: 5%;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -184,10 +183,10 @@ body {
   }
 }
 .container header nav {
+  display: flex;
   justify-content: space-around;
   align-items: center;
   max-width: 100%;
-  display: flex;
   font-size: 1.5rem;
   margin-right: 1%;
 }
@@ -221,6 +220,7 @@ body {
   .container header nav a {
     overflow: hidden;
     text-align: baseline;
+    display: flex;
     justify-content: space-between;
     align-items: center;
   }
@@ -276,8 +276,8 @@ body {
   }
 }
 .container .intro .flexMe {
-  display: flex;
   flex-wrap: wrap;
+  display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
